@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outDir": "./built",
+        "module": "ES6",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true
+    },
+    "include": ["ts/**/*"]
+}

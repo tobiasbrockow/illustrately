@@ -1,0 +1,31 @@
+{% extends "designeditor/layout.html" %}
+{% load static %}
+
+{% block header %}
+    <nav class="header-1">
+        <div class="logo-2">
+            <a href="{% url 'index' %}">Illustratly</a>
+        </div>
+
+        <div class="profile-2">
+            <a href="{% url 'index' %}">Create a new</a>
+            <a href="{% url 'overview' %}">Overview</a>
+            <a href="{% url 'logout' %}">Log Out</a>
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="home-body-1">
+        <div class="illus-2">
+            <h3>Your Illustrations</h2>
+            <div class="your-illus-3 overview">
+                {% for illu in illustrations %}
+                    <a class="illu-4" href="editor/{{ illu.id }}">
+                        {{ illu.name }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>  
+    </div>
+{% endblock %}

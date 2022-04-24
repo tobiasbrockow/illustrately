@@ -1,0 +1,90 @@
+{% extends "designeditor/layout.html" %}
+{% load static %}
+
+{% block header %}
+    <nav class="header-1">
+        <div class="logo-2">
+            <a href="{% url 'index' %}">Illustratly</a>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="profile-2">
+            <a href="{% url 'index' %}">Create a new</a>
+            <a href="{% url 'overview' %}">Overview</a>
+            <a href="{% url 'logout' %}">Log Out</a>
+        </div>
+        {% else %}
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+    </nav>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'designeditor/built/ts/home.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="home-body-1">
+        <div class="illus-2">
+            <h3>Your Illustrations</h2>
+            <div class="your-illus-3">
+                {% if length == 0 %}
+                    <div class="illu-4">
+                        No illustrations yet
+                    </div>
+                {% elif length <= 3 and length >= 1 %}
+                    {% for illu in illustrations %}
+                        <a class="illu-4" href="editor/{{ illu.id }}">
+                            {{ illu.name }}
+                        </a>
+                    {% endfor %}
+                {% elif length >= 4 %}
+                    {% for illu in illustrations %}
+                        <a class="illu-4" href="editor/{{ illu.id }}">
+                            {{ illu.name }}
+                        </a>
+                    {% endfor %}
+                        <a class="illu-4" href="{% url 'overview' %}">
+                            Load more
+                        </a>
+                {% endif %}
+                
+            </div>
+        </div>
+        <div class="illus-2">
+            <h3>Create a new</h2>
+            <div class="new-illus-3">
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_building_blocks.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_deliveries.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_ether_re.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_product_teardown.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_tasting_re.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_world_re.svg' %}" class="new-img-5" data-name="undraw_world_re" name="world woman">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_apps_re.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_getting_coffee.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_interview_re.svg' %}" class="new-img-5">
+                </div>
+                <div class="illu-4">
+                    <img src="{% static 'designeditor/img/undraw_maker_launch_re.svg' %}" class="new-img-5">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends "designeditor/layout.html" %} {% load static %} {% block header %}
+<header class="header-1">
+  <div class="logo-2">
+    <a href="{% url 'index' %}">Illustratly</a>
+  </div>
+  <div class="design-title-2">
+    <span id="design-title">{{ name }}</span>
+    <input type="text" id="design-title-input" class="hide" />
+    <span id="save-status">All changes saved</span>
+  </div>
+  <div class="ctas-2">
+    <div class="resize-3">
+      <button id="resize">Resize</button>
+      <div class="resize-options-4">
+        <div>
+          <span>Width</span>
+          <input
+            type="number"
+            pattern="\d*"
+            inputmode="numeric"
+            id="resize-width"
+          />
+        </div>
+        <div>
+          <span>Height</span>
+          <input
+            type="number"
+            pattern="\d*"
+            inputmode="numeric"
+            id="resize-height"
+          />
+        </div>
+        <button id="resize-2">Resize</button>
+      </div>
+    </div>
+    <button id="export">Export</button>
+  </div>
+</header>
+{% endblock %} {% block scripts %}
+<script
+  src="{% static 'designeditor/built/editor-min.js' %}"
+  type="module"
+></script>
+{% endblock %} {% block body %}
+<div class="body-1">
+  <aside id="editor-sidebar" class="sidebar-2">
+    <div class="sidebar-title-3">
+      <h2>General customizations</h2>
+    </div>
+    <div class="sidebar-colors-3">
+      <h4>Primary color</h4>
+      <div id="general-colors" class="colors-4">
+        <div class="colors-5">
+          <input type="color" id="color-1" class="color-6" />
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-graphic-options-3"></div>
+  </aside>
+  <div class="editor-2">
+    <div class="editor-3">
+      <div class="editor-4">
+        <div class="editor-5">
+          <div class="editor-6">{{ html |safe }}</div>
+          <div class="editor-overlay-6">
+            <div class="overlay-7">
+              <div class="overlay-8">
+                <div class="overlay-9" id="resize-top-left">
+                  <div class="overlay-10" id="r-tl"></div>
+                </div>
+                <div class="overlay-9" id="resize-top-right">
+                  <div class="overlay-10" id="r-tr"></div>
+                </div>
+                <div class="overlay-9" id="resize-bottom-left">
+                  <div class="overlay-10" id="r-bl"></div>
+                </div>
+                <div class="overlay-9" id="resize-bottom-right">
+                  <div class="overlay-10" id="r-br"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+.root-0 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-1 {
+  --margin-left-right: 40px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.body-1 {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.home-body-1 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.illus-2 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.your-illus-3 {
+  display: flex;
+  gap: 50px;
+}
+
+.overview {
+  flex-wrap: wrap;
+}
+
+.new-illus-3 {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.illu-4 {
+  background-color: rgb(250, 250, 250);
+  width: 240px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.illu-4 > svg {
+  width: 90%;
+  height: 90%;
+}
+
+.new-img-5 {
+  width: 90%;
+  height: 90%;
+}
+
+.profile-2 {
+  margin-right: var(--margin-left-right);
+  display: flex;
+  gap: 30px;
+}
+
+.profile-2 a {
+  text-decoration: none;
+}
+
+.logo-2 {
+  margin-left: var(--margin-left-right);
+}
+
+.logo-2 a {
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ctas-2 {
+  margin-right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.resize-3 {
+  display: inline-block;
+}
+
+.ctas-2 button {
+  cursor: pointer;
+  background-color: #b9b9b9;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#resize-2 {
+  background-color: #5f5f5f;
+}
+
+.resize-options-4 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.design-title-2 #save-status {
+  color: rgb(214, 214, 214);
+  margin-left: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+.sidebar-2 {
+  color: white;
+  background-color: rgb(95, 95, 95);
+  width: 20%;
+  min-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.sidebar-title-3 {
+  margin-left: 15px;
+}
+
+.sidebar-colors-3 {
+  margin-left: 15px;
+  flex-grow: 1;
+}
+
+.sidebar-graphic-options-3 {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.graphic-replacement-4 {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.graphic-replacement-4 svg {
+  height: 100%;
+  width: 100%;
+}
+
+.colors-5 {
+  display: flex;
+  gap: 15px;
+}
+
+.color-6 {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(95, 95, 95);
+  border: none;
+}
+
+.editor-2 {
+  background-color: rgb(243, 243, 243);
+  flex-grow: 1;
+  position: relative;
+}
+
+.editor-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.editor-4 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.editor-5 {
+  background-color: white;
+  position: relative;
+}
+
+.editor-6 {
+  transform-origin: 0 0;
+}
+
+.editor-6 svg {
+  width: 100%;
+  height: 100%;
+}
+
+.illustration {
+  overflow: hidden;
+  position: absolute;
+}
+
+.graphic {
+  position: absolute;
+}
+
+.editor-overlay-6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.overlay-7 {
+  position: absolute;
+  border-width: 2px;
+  border-color: rgb(171 171 171);
+}
+
+.overlay-8 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  --resize-px: -13px;
+}
+
+.overlay-9 {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.overlay-10 {
+  display: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  position: relative;
+  box-shadow: 1px 1px 3px 0px black;
+}
+
+#resize-top-left {
+  top: var(--resize-px);
+  left: var(--resize-px);
+  cursor: nw-resize;
+}
+
+#resize-top-right {
+  top: var(--resize-px);
+  right: var(--resize-px);
+  cursor: ne-resize;
+}
+
+#resize-bottom-left {
+  bottom: var(--resize-px);
+  left: var(--resize-px);
+  cursor: sw-resize;
+}
+
+#resize-bottom-right {
+  bottom: var(--resize-px);
+  right: var(--resize-px);
+  cursor: se-resize;
+}
+
+.your-illus-3 .canvas-3 .svg-4 {
+  transform: inherit !important;
+}

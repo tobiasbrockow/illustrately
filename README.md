@@ -4,7 +4,7 @@ Professional illustrations, highly customizable.
 
 ## Video
 
-tba.
+https://youtu.be/uS6R9QYFeDk
 
 ## Features
 
